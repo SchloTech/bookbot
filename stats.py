@@ -15,8 +15,11 @@ def get_character_count(book_string):
     return character_count
 
 def sort_dict(dictionary):
+    
+    list_of_dicts = [{"name": key, "num": value} for key, value in dictionary.items()]
+
     def sort_on(items):
         return items["num"]
     
-    dictionary.sort(reverse=True, key=sort_on)
-    return dictionary
+    list_of_dicts.sort(reverse=True, key=sort_on)
+    return list_of_dicts
